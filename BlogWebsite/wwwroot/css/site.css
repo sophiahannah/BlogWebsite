@@ -1,0 +1,47 @@
+:root {
+    --pastel-bg: #FFFDF0;
+    --pastel-yellow: #FDF2B3; 
+    --pastel-card: #FFFFFF;
+    --text-main: #334155; 
+    --border-color: #F5EBA6;
+}
+
+body {
+    background-color: var(--pastel-bg);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Customization */
+.navbar-pastel {
+    background-color: var(--pastel-yellow) !important;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Blog Card Styling */
+.blog-card {
+    background-color: var(--pastel-card);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .blog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(245, 235, 166, 0.4);
+    }
+
+.btn-pastel {
+    background-color: var(--pastel-yellow);
+    color: var(--text-main);
+    border: 1px solid #e5d676;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+    .btn-pastel:hover {
+        background-color: #FBEA8C;
+        color: var(--text-main);
+    }

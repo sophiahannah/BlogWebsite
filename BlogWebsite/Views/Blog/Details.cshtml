@@ -1,0 +1,19 @@
+﻿@model BlogWebsite.Models.Post
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container mt-5" style="max-width: 800px;">
+    <a asp-action="Index" class="btn-pastel d-inline-block mb-4">← Back to Feed</a>
+    
+    <article class="bg-white p-5 rounded-4 shadow-sm border" style="border-color: var(--border-color) !important;">
+        <small class="text-muted d-block mb-2">Published on @Model.CreatedAt.ToString("MMMM dd, yyyy")</small>
+        <h1 class="fw-bold mb-4">@Model.Title</h1>
+        <hr style="border-color: var(--border-color);">
+        
+        <div class="fs-5 lh-lg mt-4">
+            @Model.Content
+        </div>
+    </article>
+</div>
