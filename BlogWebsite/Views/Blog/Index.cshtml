@@ -5,9 +5,17 @@
 }
 
 <div class="container mt-5">
-    <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold">Welcome to the Tech & Pastel Blog</h1>
-        <p class="text-muted">Exploring tech with a soft aesthetic. 💛</p>
+    
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <div>
+            <h1 class="display-4 fw-bold">DevCanvas</h1>
+            <p class="text-muted">A blend of full-stack logic and clean UI/UX design. ✨</p>
+        </div>
+        <div>
+            <a asp-action="Create" class="btn-pastel fs-6 px-4 py-2 text-decoration-none shadow-sm fw-bold">
+                ➕ Write New Article
+            </a>
+        </div>
     </div>
 
     <div class="row">
@@ -19,8 +27,11 @@
                         <small class="text-muted mb-2">📅 @post.CreatedAt.ToString("MMM dd, yyyy")</small>
                         <h3 class="card-title fw-bold">@post.Title</h3>
                         <p class="card-text text-muted flex-grow-1">@post.Summary</p>
-                        <div class="mt-3">
-                            <a asp-controller="Blog" asp-action="Details" asp-route-id="@post.Id" class="btn-pastel">Read Article →</a>
+                        
+                        <div class="mt-4 d-flex gap-2">
+                            <a asp-action="Details" asp-route-id="@post.Id" class="btn btn-sm btn-pastel text-decoration-none px-3">Read</a>
+                            <a asp-action="Edit" asp-route-id="@post.Id" class="btn btn-sm btn-outline-secondary px-3">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@post.Id" class="btn btn-sm btn-outline-danger px-3">Delete</a>
                         </div>
                     </div>
                 </div>

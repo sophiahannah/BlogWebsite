@@ -1,0 +1,22 @@
+﻿@model BlogWebsite.Models.Post
+@{
+    ViewData["Title"] = "Delete Article";
+}
+
+<div class="container mt-5" style="max-width: 600px;">
+    <div class="alert alert-danger rounded-4 p-4 shadow-sm">
+        <h3 class="fw-bold text-danger mb-3">⚠️ Are you sure you want to delete this?</h3>
+        <p>This action cannot be undone.</p>
+        
+        <div class="bg-white p-3 rounded-3 mb-4">
+            <h5 class="fw-bold">@Model.Title</h5>
+            <p class="text-muted mb-0">@Model.Summary</p>
+        </div>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger px-4 fw-bold">Yes, Delete It</button>
+            <a asp-action="Index" class="btn btn-light ms-2">Cancel</a>
+        </form>
+    </div>
+</div>
